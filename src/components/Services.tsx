@@ -1,44 +1,85 @@
 import { motion } from "framer-motion";
-import { 
-  Code, 
-  Smartphone, 
-  Cloud, 
-  Database, 
-  Shield, 
+import {
+  Code,
+  Smartphone,
+  Cloud,
+  Database,
+  Shield,
   Zap,
-  ArrowUpRight
+  ArrowUpRight,
+  Settings,
+  GitBranch,
+  PenTool,
+  Brain,
+  Sparkles
 } from "lucide-react";
 
 const services = [
   {
     icon: Code,
     title: "Web Development",
-    description: "Custom web applications built with modern frameworks like React, Next.js, and Vue for optimal performance.",
+    description:
+      "Custom web applications built with modern frameworks like React, Next.js, and Vue for optimal performance.",
   },
   {
     icon: Smartphone,
     title: "Mobile Apps",
-    description: "Native and cross-platform mobile applications for iOS and Android that users love.",
+    description:
+      "Native and cross-platform mobile applications for iOS and Android that users love.",
   },
   {
     icon: Cloud,
     title: "Cloud Solutions",
-    description: "Scalable cloud infrastructure on AWS, GCP, or Azure with seamless deployment pipelines.",
+    description:
+      "Scalable cloud infrastructure on AWS, GCP, or Azure with seamless deployment pipelines.",
   },
   {
     icon: Database,
     title: "Backend Systems",
-    description: "Robust APIs and microservices architecture designed for high availability and performance.",
+    description:
+      "Robust APIs and microservices architecture designed for high availability and performance.",
   },
   {
     icon: Shield,
     title: "Security Audit",
-    description: "Comprehensive security assessments and implementation of best practices to protect your data.",
+    description:
+      "Comprehensive security assessments and implementation of best practices to protect your data.",
   },
   {
     icon: Zap,
-    title: "Performance",
-    description: "Optimization services to ensure your applications load fast and run smoothly at scale.",
+    title: "Performance Optimization",
+    description:
+      "Optimization services to ensure your applications load fast and run smoothly at scale.",
+  },
+  {
+    icon: Settings,
+    title: "Automation",
+    description:
+      "Workflow and process automation to reduce manual work, improve efficiency, and scale operations.",
+  },
+  {
+    icon: GitBranch,
+    title: "DevOps & CI/CD",
+    description:
+      "End-to-end DevOps solutions including CI/CD pipelines, infrastructure as code, and monitoring.",
+  },
+  {
+    icon: PenTool,
+    title: "Content Writing",
+    description:
+      "High-quality technical, marketing, and SEO-friendly content tailored to your brand voice.",
+  },
+  {
+    icon: Brain,
+    title: "AI & Machine Learning",
+    description:
+      "Custom AI and ML solutions for data-driven insights, predictions, and intelligent automation.",
+  },
+  {
+    icon: Sparkles,
+    title: "Generative AI",
+    description:
+      "Generative AI solutions including chatbots, copilots, and content generation powered by LLMs.",
   },
 ];
 
@@ -61,7 +102,7 @@ const Services = () => {
             Services We Offer
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            End-to-end software development services tailored to your unique business needs.
+            End-to-end software, automation, and AI-driven services built to scale with your business.
           </p>
         </motion.div>
 

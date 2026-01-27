@@ -13,7 +13,7 @@ const projects = [
     title: "HealthCare App",
     category: "Mobile Application",
     description: "Patient management system connecting doctors and patients with telemedicine features.",
-    image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?w=800&h=600&fit=crop",
+    image: "https://www.elpassion.com/hubfs/healthcare_app_ideas.jpg",
     tags: ["React Native", "Firebase", "HIPAA"],
   },
   {

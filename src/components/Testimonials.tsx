@@ -6,14 +6,14 @@ const testimonials = [
     name: "Sarah Chen",
     role: "CTO, TechStart Inc",
     image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=150&h=150&fit=crop&crop=face",
-    content: "DevForge transformed our MVP into a scalable platform that handles millions of users. Their technical expertise and communication were exceptional.",
+    content: "Logiccascade transformed our MVP into a scalable platform that handles millions of users. Their technical expertise and communication were exceptional.",
     rating: 5,
   },
   {
     name: "Marcus Johnson",
     role: "Founder, HealthFlow",
     image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face",
-    content: "Working with DevForge was a game-changer. They delivered our healthcare app 2 weeks ahead of schedule with zero bugs in production.",
+    content: "Working with Logiccascade was a game-changer. They delivered our healthcare app 2 weeks ahead of schedule with zero bugs in production.",
     rating: 5,
   },
   {

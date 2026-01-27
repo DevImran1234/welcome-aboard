@@ -10,12 +10,12 @@ const contactInfo = [
   {
     icon: Mail,
     label: "Email",
-    value: "hello@devforge.io",
+    value: "hello@logiccascade.com",
   },
   {
     icon: Phone,
     label: "Phone",
-    value: "+1 (555) 123-4567",
+    value: "+1 (918) 815-1921",
   },
   {
     icon: MapPin,

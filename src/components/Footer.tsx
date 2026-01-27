@@ -1,4 +1,5 @@
 import { Code2, Github, Linkedin, Twitter } from "lucide-react";
+import logo from '../../public/logowhite.png'
 
 const footerLinks = {
   company: [
@@ -35,10 +36,9 @@ const Footer = () => {
           {/* Brand Column */}
           <div className="col-span-2 md:col-span-4 lg:col-span-1">
             <a href="#" className="flex items-center gap-3 mb-6">
-              <div className="w-10 h-10 rounded-xl bg-primary flex items-center justify-center">
-                <Code2 className="w-5 h-5 text-primary-foreground" />
+              <div className="h-40 rounded-xl  flex items-center justify-center">
+              <img src={logo} alt="" />
               </div>
-              <span className="text-xl font-bold text-foreground">logiccasadde</span>
             </a>
             <p className="text-sm text-muted-foreground leading-relaxed mb-6">
               Building exceptional software solutions for businesses worldwide.
@@ -110,7 +110,7 @@ const Footer = () => {
         {/* Bottom Bar */}
         <div className="mt-16 pt-8 border-t border-border/50 flex flex-col sm:flex-row justify-between items-center gap-4">
           <p className="text-sm text-muted-foreground">
-            © {new Date().getFullYear()} logiccasadde. All rights reserved.
+            © {new Date().getFullYear()} logiccascade. All rights reserved.
           </p>
           <div className="flex gap-6">
             <a href="#" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
