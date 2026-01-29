@@ -27,15 +27,15 @@ const projects = [
 
 const Work = () => {
   return (
-    <section id="work" className="py-24 lg:py-32 bg-secondary/20">
-      <div className="max-w-7xl mx-auto px-6 lg:px-8">
+    <section id="work" className="py-12 sm:py-16 md:py-24 lg:py-32 bg-secondary/20">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="text-center mb-16"
+          className="text-center mb-10 sm:mb-14 md:mb-16"
         >
           <span className="text-sm font-semibold text-primary uppercase tracking-wider">
             Our Portfolio
@@ -49,7 +49,7 @@ const Work = () => {
         </motion.div>
 
         {/* Projects Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 md:gap-8">
           {projects.map((project, index) => (
             <motion.div
               key={project.title}
@@ -60,7 +60,7 @@ const Work = () => {
               className="group relative rounded-2xl overflow-hidden bg-card border border-border/50"
             >
               {/* Image */}
-              <div className="relative h-56 overflow-hidden">
+              <div className="relative h-40 sm:h-48 md:h-56 overflow-hidden">
                 <img
                   src={project.image}
                   alt={project.title}
@@ -80,7 +80,7 @@ const Work = () => {
               </div>
 
               {/* Content */}
-              <div className="p-6">
+              <div className="p-4 sm:p-5 md:p-6">
                 <span className="text-xs font-semibold text-primary uppercase tracking-wider">
                   {project.category}
                 </span>

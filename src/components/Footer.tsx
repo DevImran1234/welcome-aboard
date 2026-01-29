@@ -31,13 +31,13 @@ const socialLinks = [
 const Footer = () => {
   return (
     <footer className="border-t border-border/50 bg-card/50">
-      <div className="max-w-7xl mx-auto px-6 lg:px-8 py-16">
-        <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-8 lg:gap-12">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 sm:gap-8 lg:gap-12">
           {/* Brand Column */}
-          <div className="col-span-2 md:col-span-4 lg:col-span-1">
-            <a href="#" className="flex items-center gap-3 mb-6">
-              <div className="h-40 rounded-xl  flex items-center justify-center">
-              <img src={logo} alt="" />
+          <div className="col-span-1">
+            <a href="#" className="flex items-center gap-3 mb-4 sm:mb-6">
+              <div className="h-12 sm:h-14 md:h-16 rounded-lg sm:rounded-xl flex items-center justify-center">
+              <img src={logo} alt="Logo" />
               </div>
             </a>
             <p className="text-sm text-muted-foreground leading-relaxed mb-6">
@@ -108,7 +108,7 @@ const Footer = () => {
         </div>
 
         {/* Bottom Bar */}
-        <div className="mt-16 pt-8 border-t border-border/50 flex flex-col sm:flex-row justify-between items-center gap-4">
+        <div className="mt-12 sm:mt-16 pt-6 sm:pt-8 border-t border-border/50 flex flex-col sm:flex-row justify-between items-center gap-4 sm:gap-6">
           <p className="text-sm text-muted-foreground">
             © {new Date().getFullYear()} logiccascade. All rights reserved.
           </p>

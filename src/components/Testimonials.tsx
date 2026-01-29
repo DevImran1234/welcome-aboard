@@ -27,15 +27,15 @@ const testimonials = [
 
 const Testimonials = () => {
   return (
-    <section className="py-24 lg:py-32 bg-secondary/20">
-      <div className="max-w-7xl mx-auto px-6 lg:px-8">
+    <section className="py-12 sm:py-16 md:py-24 lg:py-32 bg-secondary/20">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="text-center mb-16"
+          className="text-center mb-10 sm:mb-14 md:mb-16"
         >
           <span className="text-sm font-semibold text-primary uppercase tracking-wider">
             Client Stories
@@ -49,7 +49,7 @@ const Testimonials = () => {
         </motion.div>
 
         {/* Testimonials Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 md:gap-8">
           {testimonials.map((testimonial, index) => (
             <motion.div
               key={testimonial.name}
@@ -57,7 +57,7 @@ const Testimonials = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="relative p-8 rounded-2xl bg-card border border-border/50"
+              className="relative p-5 sm:p-6 md:p-8 rounded-xl sm:rounded-2xl bg-card border border-border/50"
             >
               {/* Quote Icon */}
               <Quote className="w-10 h-10 text-primary/20 absolute top-6 right-6" />
