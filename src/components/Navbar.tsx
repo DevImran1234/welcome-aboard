@@ -21,7 +21,7 @@ const Navbar = () => {
       className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-xl border-b border-border/50"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16 sm:h-20">
+        <div className="flex items-center justify-between h-24 sm:h-28 md:h-32">
           {/* Logo */}
           {/* <a href="#" className="flex items-center gap-3">
             <div className="w-10 h-10 rounded-xl bg-primary flex items-center justify-center">
@@ -29,7 +29,7 @@ const Navbar = () => {
             </div>
             <span className="text-xl font-bold text-foreground">logiccasadde</span>
           </a> */}
-          <img src={logo} alt="Logo" className="h-16 sm:h-18 md:h-20 rounded-xl" />
+          <img src={logo} alt="Logo" className="h-20 sm:h-24 md:h-28 rounded-xl" />
 
 
           {/* Desktop Nav */}
