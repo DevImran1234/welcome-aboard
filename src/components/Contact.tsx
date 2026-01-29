@@ -45,9 +45,9 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="py-24 lg:py-32">
-      <div className="max-w-7xl mx-auto px-6 lg:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
+    <section id="contact" className="py-12 sm:py-16 md:py-24 lg:py-32">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 lg:gap-16">
           {/* Left Side - Info */}
           <motion.div
             initial={{ opacity: 0, x: -30 }}
@@ -58,7 +58,7 @@ const Contact = () => {
             <span className="text-sm font-semibold text-primary uppercase tracking-wider">
               Get In Touch
             </span>
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground mt-4 mb-6">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mt-4 mb-5 sm:mb-6">
               Let's Build Something Great
             </h2>
             <p className="text-lg text-muted-foreground mb-10 leading-relaxed">
@@ -67,7 +67,7 @@ const Contact = () => {
             </p>
 
             {/* Contact Info */}
-            <div className="space-y-6">
+            <div className="space-y-4 sm:space-y-6">
               {contactInfo.map((item, index) => (
                 <motion.div
                   key={item.label}
@@ -96,7 +96,7 @@ const Contact = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <form onSubmit={handleSubmit} className="space-y-6">
+            <form onSubmit={handleSubmit} className="space-y-4 sm:space-y-6">
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                 <div>
                   <label className="block text-sm font-medium text-foreground mb-2">

@@ -21,7 +21,7 @@ const Hero = () => {
         }}
       />
 
-      <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8 text-center">
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         {/* Badge */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -81,7 +81,7 @@ const Hero = () => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.8, delay: 0.5 }}
-          className="grid grid-cols-3 gap-8 sm:gap-16 mt-20 pt-12 border-t border-border/30 max-w-2xl mx-auto"
+          className="grid grid-cols-3 gap-4 sm:gap-8 md:gap-16 mt-16 sm:mt-20 pt-8 sm:pt-12 border-t border-border/30 max-w-2xl mx-auto"
         >
           {[
             { value: "150+", label: "Projects Delivered" },
