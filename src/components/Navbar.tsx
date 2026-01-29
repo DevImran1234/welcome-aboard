@@ -29,7 +29,7 @@ const Navbar = () => {
             </div>
             <span className="text-xl font-bold text-foreground">logiccasadde</span>
           </a> */}
-          <img src={logo} alt="Logo" className="h-12 sm:h-14 md:h-16 rounded-xl" />
+          <img src={logo} alt="Logo" className="h-16 sm:h-18 md:h-20 rounded-xl" />
 
 
           {/* Desktop Nav */}
