@@ -1,4 +1,31 @@
+# Robots.txt for Logiccascade - Software Development & AI Solutions
+# Last Updated: 2024
+
+# Allow all bots
 User-agent: *
 Allow: /
 
+# Disallow admin and private paths
+Disallow: /admin/
+Disallow: /private/
+Disallow: /internal/
+Disallow: /.git/
+Disallow: /.env
+
+# Google-specific rules
+User-agent: Googlebot
+Crawl-delay: 0
+Allow: /
+
+# Bing
+User-agent: Bingbot
+Crawl-delay: 0
+Allow: /
+
+# Sitemap locations
 Sitemap: https://logiccascade.us/sitemap.xml
+Sitemap: https://logiccascade.us/sitemap-blog.xml
+
+# Crawl delay for other bots
+User-agent: *
+Crawl-delay: 1

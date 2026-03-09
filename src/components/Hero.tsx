@@ -42,8 +42,8 @@ const Hero = () => {
           transition={{ duration: 0.8, delay: 0.1 }}
           className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight leading-[1.1] mb-6"
         >
-          <span className="text-foreground">We Build </span>
-          <span className="text-gradient">Software</span>
+          <span className="text-foreground">Logiccascade: </span>
+          <span className="text-gradient">Software Development</span>
           <br />
           <span className="text-foreground">That </span>
           <span className="text-primary">Scales</span>
@@ -56,8 +56,8 @@ const Hero = () => {
           transition={{ duration: 0.8, delay: 0.2 }}
           className="text-lg sm:text-xl text-muted-foreground max-w-2xl mx-auto mb-10 leading-relaxed"
         >
-          From startups to enterprises, we transform ideas into powerful, 
-          scalable applications that drive business growth.
+          Logiccascade is your trusted software development partner. We deliver web development, 
+          mobile apps, cloud solutions, AI-powered applications, and DevOps services for startups and enterprises worldwide.
         </motion.p>
 
         {/* CTAs */}

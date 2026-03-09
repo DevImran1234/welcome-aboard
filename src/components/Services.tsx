@@ -96,13 +96,13 @@ const Services = () => {
           className="text-center mb-10 sm:mb-14 md:mb-16"
         >
           <span className="text-sm font-semibold text-primary uppercase tracking-wider">
-            What We Do
+            Our Expertise
           </span>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground mt-4 mb-6">
-            Services We Offer
+            Logiccascade Services
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            End-to-end software, automation, and AI-driven services built to scale with your business.
+            Logiccascade provides comprehensive software development, cloud solutions, DevOps, automation, and AI-driven services designed to scale with your business needs.
           </p>
         </motion.div>
 

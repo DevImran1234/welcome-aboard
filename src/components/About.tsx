@@ -52,15 +52,15 @@ const About = () => {
             transition={{ duration: 0.6 }}
           >
             <span className="text-sm font-semibold text-primary uppercase tracking-wider">
-              Why Choose Us
+              About Logiccascade
             </span>
             <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mt-4 mb-5 sm:mb-6">
-              We're Different By Design
+              Why Choose Logiccascade
             </h2>
             <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
-              We don't just write code—we architect solutions. Our team combines 
-              technical excellence with business acumen to create software that 
-              truly makes an impact.
+              Logiccascade doesn't just write code—we architect solutions. Our expert team combines 
+              technical excellence with business acumen to create software that truly makes an impact. 
+              We specialize in web development, mobile apps, cloud solutions, DevOps, and AI-powered applications.
             </p>
 
             {/* Highlights Grid */}
