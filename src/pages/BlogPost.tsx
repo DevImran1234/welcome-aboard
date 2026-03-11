@@ -1,5 +1,5 @@
+import { useEffect } from 'react';
 import { useParams } from 'react-router-dom';
-import { Helmet } from 'react-helmet-async';
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { blogPosts } from '@/data/blogPosts';
@@ -8,6 +8,35 @@ import BlogPostContent from '@/components/blog/BlogPostContent';
 const BlogPost = () => {
   const { slug } = useParams<{ slug: string }>();
   const post = blogPosts.find(p => p.slug === slug);
+
+  useEffect(() => {
+    if (post) {
+      // Set meta tags
+      document.title = post.seoTitle;
+      document.querySelector('meta[name="description"]')?.setAttribute('content', post.seoDescription);
+      document.querySelector('meta[name="keywords"]')?.setAttribute('content', post.seoKeywords.join(', '));
+      
+      let canonical = document.querySelector('link[rel="canonical"]') as HTMLLinkElement;
+      if (!canonical) {
+        canonical = document.createElement('link') as HTMLLinkElement;
+        canonical.rel = 'canonical';
+        document.head.appendChild(canonical);
+      }
+      canonical.href = `https://logiccascade.us/blog/${post.slug}`;
+      
+      document.querySelector('meta[property="og:title"]')?.setAttribute('content', post.seoTitle);
+      document.querySelector('meta[property="og:description"]')?.setAttribute('content', post.seoDescription);
+      document.querySelector('meta[property="og:url"]')?.setAttribute('content', `https://logiccascade.us/blog/${post.slug}`);
+      document.querySelector('meta[property="article:published_time"]')?.setAttribute('content', post.publishedAt);
+      document.querySelector('meta[property="article:author"]')?.setAttribute('content', post.author);
+      document.querySelector('meta[name="twitter:title"]')?.setAttribute('content', post.seoTitle);
+      document.querySelector('meta[name="twitter:description"]')?.setAttribute('content', post.seoDescription);
+      
+      if (post.seoImage) {
+        document.querySelector('meta[property="og:image"]')?.setAttribute('content', post.seoImage);
+      }
+    }
+  }, [post]);
 
   if (!post) {
     return (
@@ -26,38 +55,22 @@ const BlogPost = () => {
 
   return (
     <>
-      <Helmet>
-        <title>{post.seoTitle}</title>
-        <meta name="description" content={post.seoDescription} />
-        <meta name="keywords" content={post.seoKeywords.join(', ')} />
-        <link rel="canonical" href={`https://logiccascade.com/blog/${post.slug}`} />
-        <meta property="og:title" content={post.seoTitle} />
-        <meta property="og:description" content={post.seoDescription} />
-        <meta property="og:type" content="article" />
-        <meta property="og:url" content={`https://logiccascade.com/blog/${post.slug}`} />
-        <meta property="article:published_time" content={post.publishedAt} />
-        <meta property="article:author" content={post.author} />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content={post.seoTitle} />
-        <meta name="twitter:description" content={post.seoDescription} />
-        {post.seoImage && <meta property="og:image" content={post.seoImage} />}
-        <script type="application/ld+json">
-          {JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "BlogPosting",
-            "headline": post.title,
-            "description": post.seoDescription,
-            "author": {
-              "@type": "Person",
-              "name": post.author
-            },
-            "datePublished": post.publishedAt,
-            "dateModified": post.updatedAt,
-            "image": post.seoImage,
-            "url": `https://logiccascade.com/blog/${post.slug}`
-          })}
-        </script>
-      </Helmet>
+      <script type="application/ld+json">
+        {JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "BlogPosting",
+          "headline": post.title,
+          "description": post.seoDescription,
+          "author": {
+            "@type": "Person",
+            "name": post.author
+          },
+          "datePublished": post.publishedAt,
+          "dateModified": post.updatedAt,
+          "image": post.seoImage,
+          "url": `https://logiccascade.us/blog/${post.slug}`
+        })}
+      </script>
       <div className="min-h-screen bg-slate-900">
         <Navbar />
         <BlogPostContent post={post} />

@@ -1,9 +1,8 @@
-import { Helmet } from 'react-helmet-async';
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { motion } from "framer-motion";
 import { ChevronDown } from "lucide-react";
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 interface FAQItem {
   question: string;
@@ -76,6 +75,25 @@ const faqs: FAQItem[] = [
 const FAQ = () => {
   const [expandedIndex, setExpandedIndex] = useState<number | null>(null);
 
+  useEffect(() => {
+    // Set meta tags
+    document.title = "Logiccascade FAQ - Frequently Asked Questions | Software Development";
+    document.querySelector('meta[name="description"]')?.setAttribute('content', "Frequently asked questions about Logiccascade's software development, cloud solutions, AI, DevOps, and web development services. Get answers to common questions.");
+    document.querySelector('meta[name="keywords"]')?.setAttribute('content', "logiccascade faq, logiccascade questions, software development faq, web development questions, AI solutions, DevOps services");
+    
+    let canonical = document.querySelector('link[rel="canonical"]') as HTMLLinkElement;
+    if (!canonical) {
+      canonical = document.createElement('link') as HTMLLinkElement;
+      canonical.rel = 'canonical';
+      document.head.appendChild(canonical);
+    }
+    canonical.href = "https://logiccascade.us/faq";
+    
+    document.querySelector('meta[property="og:title"]')?.setAttribute('content', "Logiccascade FAQ - Frequently Asked Questions");
+    document.querySelector('meta[property="og:description"]')?.setAttribute('content', "Get answers to common questions about Logiccascade's software development and tech services.");
+    document.querySelector('meta[property="og:url"]')?.setAttribute('content', "https://logiccascade.us/faq");
+  }, []);
+
   const faqSchema = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
@@ -91,18 +109,9 @@ const FAQ = () => {
 
   return (
     <>
-      <Helmet>
-        <title>Logiccascade FAQ - Frequently Asked Questions | Software Development</title>
-        <meta name="description" content="Frequently asked questions about Logiccascade's software development, cloud solutions, AI, DevOps, and web development services. Get answers to common questions." />
-        <meta name="keywords" content="logiccascade faq, logiccascade questions, software development faq, web development questions, AI solutions, DevOps services" />
-        <link rel="canonical" href="https://logiccascade.us/faq" />
-        <meta property="og:title" content="Logiccascade FAQ - Frequently Asked Questions" />
-        <meta property="og:description" content="Get answers to common questions about Logiccascade's software development and tech services." />
-        <meta property="og:url" content="https://logiccascade.us/faq" />
-        <script type="application/ld+json">
-          {JSON.stringify(faqSchema)}
-        </script>
-      </Helmet>
+      <script type="application/ld+json">
+        {JSON.stringify(faqSchema)}
+      </script>
 
       <div className="min-h-screen bg-background">
         <Navbar />
