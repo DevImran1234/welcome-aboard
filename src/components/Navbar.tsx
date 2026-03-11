@@ -6,6 +6,8 @@ import logo from '../../public/logowhite.png'
 const navItems = [
   { label: "Services", href: "#services" },
   { label: "Work", href: "#work" },
+  { label: "Blog", href: "/blog" },
+  { label: "FAQ", href: "/faq" },
   { label: "About", href: "#about" },
   { label: "Contact", href: "#contact" },
 ];

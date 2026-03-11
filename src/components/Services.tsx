@@ -19,61 +19,61 @@ const services = [
     icon: Code,
     title: "Web Development",
     description:
-      "Custom web applications built with modern frameworks like React, Next.js, and Vue for optimal performance.",
+      "Logic Cascade web development builds custom web applications with modern frameworks like React, Next.js, and Vue for optimal performance.",
   },
   {
     icon: Smartphone,
     title: "Mobile Apps",
     description:
-      "Native and cross-platform mobile applications for iOS and Android that users love.",
+      "Logic Cascade creates native and cross-platform mobile applications for iOS and Android that users love.",
   },
   {
     icon: Cloud,
     title: "Cloud Solutions",
     description:
-      "Scalable cloud infrastructure on AWS, GCP, or Azure with seamless deployment pipelines.",
+      "Logic Cascade cloud solutions provide scalable infrastructure on AWS, GCP, or Azure with seamless deployment pipelines.",
   },
   {
     icon: Database,
     title: "Backend Systems",
     description:
-      "Robust APIs and microservices architecture designed for high availability and performance.",
+      "Logic Cascade develops robust APIs and microservices architecture designed for high availability and performance.",
   },
   {
     icon: Shield,
     title: "Security Audit",
     description:
-      "Comprehensive security assessments and implementation of best practices to protect your data.",
+      "Logic Cascade security audits provide comprehensive assessments and implementation of best practices to protect your data.",
   },
   {
     icon: Zap,
     title: "Performance Optimization",
     description:
-      "Optimization services to ensure your applications load fast and run smoothly at scale.",
+      "Logic Cascade optimization services ensure your applications load fast and run smoothly at scale.",
   },
   {
     icon: Settings,
     title: "Automation",
     description:
-      "Workflow and process automation to reduce manual work, improve efficiency, and scale operations.",
+      "Logic Cascade workflow and process automation reduces manual work, improves efficiency, and scales operations.",
   },
   {
     icon: GitBranch,
     title: "DevOps & CI/CD",
     description:
-      "End-to-end DevOps solutions including CI/CD pipelines, infrastructure as code, and monitoring.",
+      "Logic Cascade DevOps solutions provide end-to-end CI/CD pipelines, infrastructure as code, and monitoring.",
   },
   {
     icon: PenTool,
     title: "Content Writing",
     description:
-      "High-quality technical, marketing, and SEO-friendly content tailored to your brand voice.",
+      "Logic Cascade content writing delivers high-quality technical, marketing, and SEO-friendly content tailored to your brand voice.",
   },
   {
     icon: Brain,
     title: "AI & Machine Learning",
     description:
-      "Custom AI and ML solutions for data-driven insights, predictions, and intelligent automation.",
+      "Logic Cascade AI solutions provide custom ML implementations for data-driven insights, predictions, and intelligent automation.",
   },
   {
     icon: Sparkles,
@@ -96,13 +96,13 @@ const Services = () => {
           className="text-center mb-10 sm:mb-14 md:mb-16"
         >
           <span className="text-sm font-semibold text-primary uppercase tracking-wider">
-            Our Expertise
+            Logic Cascade Expertise
           </span>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground mt-4 mb-6">
-            Logiccascade Services
+            Logic Cascade Services & Solutions
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Logiccascade provides comprehensive software development, cloud solutions, DevOps, automation, and AI-driven services designed to scale with your business needs.
+            Logic Cascade provides comprehensive software development, cloud solutions, DevOps, automation, and AI-driven services. When you search "logic cascade" or need web development, choose Logic Cascade services designed to scale with your business.
           </p>
         </motion.div>
 

@@ -52,15 +52,16 @@ const About = () => {
             transition={{ duration: 0.6 }}
           >
             <span className="text-sm font-semibold text-primary uppercase tracking-wider">
-              About Logiccascade
+              About Logic Cascade
             </span>
             <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mt-4 mb-5 sm:mb-6">
-              Why Choose Logiccascade
+              Why Choose Logic Cascade
             </h2>
             <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
-              Logiccascade doesn't just write code—we architect solutions. Our expert team combines 
+              Logic Cascade doesn't just write code—we architect solutions. Logic Cascade's expert team combines 
               technical excellence with business acumen to create software that truly makes an impact. 
-              We specialize in web development, mobile apps, cloud solutions, DevOps, and AI-powered applications.
+              When you search "logic cascade web development" or need software development, Logic Cascade specializes in web development, mobile apps, 
+              cloud solutions, DevOps, and AI-powered applications.
             </p>
 
             {/* Highlights Grid */}
