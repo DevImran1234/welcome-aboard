@@ -1,11 +1,6 @@
 import { Link } from "react-router-dom";
 import { Calendar, Clock, User, ArrowLeft, Share2, Tag } from "lucide-react";
 import { BlogPost } from "@/data/blogPosts";
-import ReactMarkdown from 'react-markdown';
-import remarkGfm from 'remark-gfm';
-import rehypeHighlight from 'rehype-highlight';
-import rehypeRaw from 'rehype-raw';
-import 'highlight.js/styles/github-dark.css';
 
 interface BlogPostContentProps {
   post: BlogPost;
@@ -95,36 +90,49 @@ const BlogPostContent = ({ post }: BlogPostContentProps) => {
           </div>
         </div>
 
-        <div className="prose prose-lg prose-invert max-w-none prose-headings:text-white prose-p:text-gray-300 prose-strong:text-white prose-code:text-amber-400 prose-pre:bg-slate-800 prose-pre:border-slate-700 prose-blockquote:border-l-amber-500 prose-blockquote:text-gray-300 prose-a:text-amber-400 hover:prose-a:text-amber-300 prose-ul:text-gray-300 prose-ol:text-gray-300 prose-li:text-gray-300 prose-hr:border-slate-700 prose-table:border-slate-700 prose-th:border-slate-700 prose-td:border-slate-700 prose-th:bg-slate-800 prose-td:bg-slate-900">
-          <ReactMarkdown
-            remarkPlugins={[remarkGfm]}
-            rehypePlugins={[rehypeRaw, rehypeHighlight]}
-            components={{
-              h1: ({children}) => <h1 className="text-3xl font-bold text-white mb-6 mt-8 first:mt-0">{children}</h1>,
-              h2: ({children}) => <h2 className="text-2xl font-bold text-white mb-4 mt-8">{children}</h2>,
-              h3: ({children}) => <h3 className="text-xl font-bold text-white mb-3 mt-6">{children}</h3>,
-              h4: ({children}) => <h4 className="text-lg font-bold text-white mb-2 mt-4">{children}</h4>,
-              p: ({children}) => <p className="text-gray-300 mb-4 leading-relaxed">{children}</p>,
-              code: ({inline, children, ...props}) => {
-                if (inline) {
-                  return <code className="bg-slate-800 text-amber-400 px-2 py-1 rounded text-sm font-mono border border-slate-700" {...props}>{children}</code>;
-                }
-                return <code className="block bg-slate-800 text-gray-300 p-4 rounded-lg overflow-x-auto font-mono text-sm border border-slate-700" {...props}>{children}</code>;
-              },
-              pre: ({children}) => <pre className="bg-slate-800 border border-slate-700 rounded-lg overflow-x-auto p-4 mb-4">{children}</pre>,
-              blockquote: ({children}) => <blockquote className="border-l-4 border-amber-500 pl-4 my-4 text-gray-300 italic">{children}</blockquote>,
-              ul: ({children}) => <ul className="list-disc list-inside text-gray-300 mb-4 space-y-2">{children}</ul>,
-              ol: ({children}) => <ol className="list-decimal list-inside text-gray-300 mb-4 space-y-2">{children}</ol>,
-              li: ({children}) => <li className="text-gray-300">{children}</li>,
-              a: ({href, children}) => <a href={href} className="text-amber-400 hover:text-amber-300 underline transition-colors">{children}</a>,
-              hr: () => <hr className="border-slate-700 my-8" />,
-              table: ({children}) => <table className="w-full border-collapse border border-slate-700 mb-4">{children}</table>,
-              th: ({children}) => <th className="border border-slate-700 bg-slate-800 px-4 py-2 text-left text-white font-semibold">{children}</th>,
-              td: ({children}) => <td className="border border-slate-700 bg-slate-900 px-4 py-2 text-gray-300">{children}</td>,
-            }}
-          >
-            {post.content}
-          </ReactMarkdown>
+        <div className="prose prose-lg prose-invert max-w-none">
+          <div className="text-gray-300 leading-relaxed whitespace-pre-wrap break-words">
+            {post.content.split('\n').map((line, idx) => {
+              // Handle headings
+              if (line.startsWith('# ')) {
+                return <h1 key={idx} className="text-3xl font-bold text-white mb-6 mt-8 first:mt-0">{line.replace('# ', '')}</h1>;
+              }
+              if (line.startsWith('## ')) {
+                return <h2 key={idx} className="text-2xl font-bold text-white mb-4 mt-8">{line.replace('## ', '')}</h2>;
+              }
+              if (line.startsWith('### ')) {
+                return <h3 key={idx} className="text-xl font-bold text-white mb-3 mt-6">{line.replace('### ', '')}</h3>;
+              }
+              if (line.startsWith('#### ')) {
+                return <h4 key={idx} className="text-lg font-bold text-white mb-2 mt-4">{line.replace('#### ', '')}</h4>;
+              }
+              // Handle code blocks
+              if (line.startsWith('```')) {
+                return null; // Skip code fence markers
+              }
+              // Handle blockquotes
+              if (line.startsWith('> ')) {
+                return <blockquote key={idx} className="border-l-4 border-amber-500 pl-4 my-4 text-gray-300 italic">{line.replace('> ', '')}</blockquote>;
+              }
+              // Handle lists
+              if (line.startsWith('- ') || line.startsWith('* ')) {
+                return <li key={idx} className="text-gray-300 list-disc list-inside">{line.replace(/^[-*] /, '')}</li>;
+              }
+              if (line.startsWith('1. ') || line.match(/^\d+\. /)) {
+                return <li key={idx} className="text-gray-300 list-decimal list-inside">{line.replace(/^\d+\. /, '')}</li>;
+              }
+              // Handle horizontal rules
+              if (line === '---' || line === '***') {
+                return <hr key={idx} className="border-slate-700 my-8" />;
+              }
+              // Handle empty lines as spacing
+              if (line.trim() === '') {
+                return <div key={idx} className="h-2"></div>;
+              }
+              // Regular paragraphs
+              return <p key={idx} className="text-gray-300 mb-4 leading-relaxed">{line}</p>;
+            })}
+          </div>
         </div>
 
         <div className="mt-16 pt-8 border-t border-slate-700">
