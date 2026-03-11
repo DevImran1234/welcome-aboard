@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+  xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
+>
+  <!-- Homepage - Highest Priority -->
+  <url>
+    <loc>https://logiccascade.us/</loc>
+    <lastmod>2026-03-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.00</priority>
+  </url>
+
+  <!-- Main Pages -->
+  <url>
+    <loc>https://logiccascade.us/blog</loc>
+    <lastmod>2026-03-09</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.95</priority>
+  </url>
+
+  <!-- Blog Posts - Logic Cascade Featured Content -->
+  <url>
+    <loc>https://logiccascade.us/blog/logic-cascade-best-web-development-choice</loc>
+    <lastmod>2024-01-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.95</priority>
+  </url>
+
+  <url>
+    <loc>https://logiccascade.us/blog/logic-cascade-enterprise-software-development</loc>
+    <lastmod>2023-12-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.95</priority>
+  </url>
+
+  <url>
+    <loc>https://logiccascade.us/blog/logic-cascade-ai-solutions-generative-ml</loc>
+    <lastmod>2023-12-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.95</priority>
+  </url>
+
+  <!-- Technical Blog Posts -->
+  <url>
+    <loc>https://logiccascade.us/blog/future-of-web-development-ai-tools</loc>
+    <lastmod>2024-01-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
+
+  <url>
+    <loc>https://logiccascade.us/blog/react-performance-optimization-techniques</loc>
+    <lastmod>2024-01-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
+
+  <url>
+    <loc>https://logiccascade.us/blog/typescript-best-practices-scalable-applications</loc>
+    <lastmod>2024-01-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
+
+  <url>
+    <loc>https://logiccascade.us/blog/modern-css-architecture-bem-css-in-js</loc>
+    <lastmod>2024-01-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
+
+  <url>
+    <loc>https://logiccascade.us/blog/nodejs-performance-optimization-production</loc>
+    <lastmod>2024-01-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
+
+  <url>
+    <loc>https://logiccascade.us/blog/microservices-architecture-design-patterns</loc>
+    <lastmod>2024-01-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
+
+  <url>
+    <loc>https://logiccascade.us/blog/docker-kubernetes-containerization-guide</loc>
+    <lastmod>2024-01-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
+
+  <url>
+    <loc>https://logiccascade.us/faq</loc>
+    <lastmod>2026-03-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <url>
+    <loc>https://logiccascade.us/contact</loc>
+    <lastmod>2026-03-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <!-- Blog Posts - High Priority for SEO -->
+  <url>
+    <loc>https://logiccascade.us/blog/why-logiccascade-best-web-development</loc>
+    <lastmod>2026-03-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
+
+  <url>
+    <loc>https://logiccascade.us/blog/logiccascade-web-development-services</loc>
+    <lastmod>2026-03-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
+
+  <url>
+    <loc>https://logiccascade.us/blog/logiccascade-mobile-app-development</loc>
+    <lastmod>2026-03-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
+
+  <url>
+    <loc>https://logiccascade.us/blog/logiccascade-cloud-solutions</loc>
+    <lastmod>2026-03-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
+
+  <url>
+    <loc>https://logiccascade.us/blog/logiccascade-devops-services</loc>
+    <lastmod>2026-03-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
+
+  <url>
+    <loc>https://logiccascade.us/blog/logiccascade-ai-machine-learning</loc>
+    <lastmod>2026-03-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
+
+  <!-- Service Pages (Hash routes on homepage) -->
+  <url>
+    <loc>https://logiccascade.us/#services</loc>
+    <lastmod>2026-03-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
+
+  <url>
+    <loc>https://logiccascade.us/#portfolio</loc>
+    <lastmod>2026-03-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
+
+  <url>
+    <loc>https://logiccascade.us/#about</loc>
+    <lastmod>2026-03-09</lastmod>
+    <changefreq>quarterly</changefreq>
+    <priority>0.75</priority>
+  </url>
+
+  <url>
+    <loc>https://logiccascade.us/#testimonials</loc>
+    <lastmod>2026-03-09</lastmod>
+    <changefreq>quarterly</changefreq>
+    <priority>0.70</priority>
+  </url>
+</urlset>
