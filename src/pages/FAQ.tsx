@@ -117,7 +117,9 @@ const FAQ = () => {
         <Navbar />
         
         {/* Hero Section */}
-        <section className="pt-32 pb-16 px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto">
+        <section className="pt-40 pb-16 px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto" style={{
+          paddingTop:'18rem'
+        }}>
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
